@@ -1,12 +1,16 @@
 package com.alurachallenge.LiterAlura_LS.service;
 
 
+import com.alurachallenge.LiterAlura_LS.modelo.AuthorEntity;
+import com.alurachallenge.LiterAlura_LS.modelo.BookEntity;
 import com.alurachallenge.LiterAlura_LS.modules.Author;
 import com.alurachallenge.LiterAlura_LS.modules.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @RestController
 public class GutendexController {
@@ -35,5 +39,15 @@ public class GutendexController {
         }
         result.append("Idiomas: ").append(String.join(", ", book.getLanguages())).append("\n");
         return result.toString();
+    }
+
+    @GetMapping("/books")
+    public List<BookEntity> getAllBooks() {
+        return gutendexService.getAllBooks();
+    }
+
+    @GetMapping("/authors")
+    public List<AuthorEntity> getAllAuthors() {
+        return gutendexService.getAllAuthors();
     }
 }
