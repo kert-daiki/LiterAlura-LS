@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.alurachallenge</groupId>
-	<artifactId>LiterAlura-LS</artifactId>
+	<artifactId>LiterAlura_LS</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>LiterAlura-LS</name>
+	<name>LiterAlura_LS</name>
 	<description>Challenge Alura, aplicativo para registro de autores con consulta API</description>
 	<url/>
 	<licenses>
